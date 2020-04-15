@@ -29,10 +29,6 @@ public class MonopolyGame {
 		this.board = board;
 	}
 
-	public void setRoundCount(int roundCount) {
-		this.roundCount = roundCount;
-	}
-
 	public List<Die> getDice() {
 		return dice;
 	}
@@ -48,14 +44,18 @@ public class MonopolyGame {
 	public int getRoundCount() {
 		return roundCount;
 	}
-
-	public void setRoundCount(int roundCount, List<Die> dice, Board board, List<Player> players) {
+	
+	public void setRoundCount(int roundCount) {
+		this.roundCount = roundCount;
+	}
+	
+	public MonopolyGame(int roundCount, List<Die> dice, Board board, List<Player> players) {
 		this.roundCount = roundCount;
 		this.dice = new LinkedList<>(dice);
 		this.board = board;
 		this.players = new LinkedList<>(players);
 	}
-
+	
 	public void playGame() {
 		
 	}
